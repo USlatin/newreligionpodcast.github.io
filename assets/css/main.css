@@ -1291,12 +1291,10 @@ input, select, textarea {
 }
 
 		#header .logo {
-			width: 5.5rem;
-			height: 5.5rem;
-			line-height: 5.5rem;
-			border: none;
-			border-radius: 0%;
-		}
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+}
 
 			#header .logo .icon:before {
 				font-size: 2rem;
@@ -1655,7 +1653,12 @@ input, select, textarea {
 			filter: blur(0.1rem);
 			opacity: 0;
 		}
-
+#header .logo:after, 
+#header .logo:before, 
+#header > :first-child:after, 
+#header > :first-child:before {
+    display: none !important;
+}
 		body.is-preload #footer {
 			opacity: 0;
 		}

@@ -1287,8 +1287,8 @@ input, select, textarea {
 		}
 
 			#header > :first-child:before {
-				display: none;
-			}
+    display: none !important;
+}
 
 		#header .logo {
 			width: 5.5rem;

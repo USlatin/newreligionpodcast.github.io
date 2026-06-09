@@ -1660,27 +1660,19 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* --- SURGICAL REMOVAL OF VERTICAL HEADER LINES --- */
+/* --- STABLE LOGO & PLACEMENT --- */
 
-/* 1. Kill only the vertical lines (separators) on the header */
-#header:after, 
-#header:before {
-    display: none !important;
-}
-
-/* 2. Target the specific vertical line container */
-#header .inner:after, 
-#header .inner:before {
-    display: none !important;
-}
-
-/* 3. Ensure the Logo container remains free of borders */
+/* 1. Flex container for perfect centering */
 #header .logo {
-    border: none !important;
-    box-shadow: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 auto 1.5rem auto !important;
+    padding: 0 !important;
 }
 
-/* 4. Locked-in Logo Size (Confirmed "Perfect" Scaling) */
+/* 2. Locked-in Logo Size */
 #header .logo img {
     width: 20vw !important;
     max-width: 300px !important;

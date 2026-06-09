@@ -1660,40 +1660,40 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* --- CLEANUP & BALANCED LOGO --- */
+/* --- PRESERVE BOXES, TARGET HEADER LINES ONLY --- */
 
-/* 1. Eliminate ALL potential borders/lines */
-#header, #header *, #header:before, #header:after, 
-.logo, .logo *, .logo:before, .logo:after {
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-    background-image: none !important;
+/* 1. Reset ONLY the header's specific decorative pseudo-elements */
+#header:before, #header:after {
+    display: none !important;
 }
 
-/* 2. Container setup */
+/* 2. Remove the vertical line specifically attached to the logo area */
+#header .logo:after, #header .logo:before {
+    display: none !important;
+}
+
+/* 3. Logo Scaling (Locked in at your perfect size) */
 #header .logo {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
     margin: 0 auto 1.5rem auto !important;
+    padding: 0 !important;
 }
 
-/* 3. Balanced Responsive Sizing */
 #header .logo img {
-    width: 20vw !important;       /* Scales naturally with PC width */
-    max-width: 300px !important;  /* Prevents it from getting too huge */
-    min-width: 180px !important;  /* Prevents it from getting too tiny */
+    width: 20vw !important;
+    max-width: 300px !important;
+    min-width: 180px !important;
     height: auto !important;
     display: block !important;
     margin: 0 auto !important;
 }
 
-/* 4. Mobile horizontal override */
 @media screen and (max-width: 736px) {
     #header .logo img {
-        width: 45vw !important;   /* Larger % for mobile to ensure visibility */
+        width: 45vw !important;
         min-width: 150px !important;
     }
 }

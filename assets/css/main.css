@@ -1660,17 +1660,16 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* --- CLEANUP & LOGO SIZE --- */
+/* --- ULTIMATE OVERRIDE --- */
 
-/* 1. Remove stubborn header borders and lines */
-#header, #header:before, #header:after, 
-.logo, .logo:before, .logo:after {
+/* Remove Borders */
+#header, .logo, .logo:before, .logo:after {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
 }
 
-/* 2. Flex container for perfect centering */
+/* Force Center */
 .logo {
     display: flex !important;
     justify-content: center !important;
@@ -1678,8 +1677,8 @@ input, select, textarea {
     margin-bottom: 2rem !important;
 }
 
-/* 3. Logo scaling: Responsive to width, not height */
-.logo img {
+/* Ultra-Specific Image Override */
+#header .logo img {
     width: 85% !important;        
     max-width: 400px !important;  
     height: auto !important;

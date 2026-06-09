@@ -1290,15 +1290,21 @@ input, select, textarea {
     display: none !important;
 }
 
-		#header .logo {
+	#header .logo {
     border: none !important;
     border-radius: 0 !important;
     background: transparent !important;
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
 }
 
-			#header .logo .icon:before {
-				font-size: 2rem;
-			}
+#header .logo:after, 
+#header .logo:before, 
+#header > :first-child:after, 
+#header > :first-child:before {
+    display: none !important;
+}
 
 		#header .content {
 			border-style: solid;

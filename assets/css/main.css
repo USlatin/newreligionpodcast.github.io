@@ -1659,6 +1659,13 @@ input, select, textarea {
 #header > :first-child:before {
     display: none !important;
 }
+/* Make logo larger on mobile portrait */
+@media screen and (max-width: 480px) {
+    #header img {
+        width: 180px !important;
+        height: 180px !important;
+    }
+}
 		body.is-preload #footer {
 			opacity: 0;
 		}

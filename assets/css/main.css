@@ -1660,23 +1660,40 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* --- UPDATED LOGO SIZE --- */
+/* --- FINALIZED LOGO & HEADER CLEANUP --- */
 
-/* Balanced for PC: reduced to 35% */
-#header .logo img {
-    width: 35% !important;        
-    max-width: 250px !important;  
-    height: auto !important;
-    display: block !important;
-    margin: 0 auto 2rem auto !important;
+/* 1. Remove stubborn header borders and decorative lines */
+#header, #header:before, #header:after, 
+.logo, .logo:before, .logo:after {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background-image: none !important;
 }
 
-/* Balanced for Mobile: reduced to 60% */
+/* 2. Flex container for perfect centering */
+#header .logo {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 auto 1.5rem auto !important;
+    padding: 0 !important;
+}
+
+/* 3. Balanced Logo scaling */
+#header .logo img {
+    width: 30% !important;        /* Smaller for PC */
+    max-width: 200px !important;  
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+/* 4. Mobile specific override to keep it visible but not bloated */
 @media screen and (max-width: 736px) {
     #header .logo img {
-        width: 60% !important;    
-        max-width: 200px !important;
-        height: auto !important;
-        margin: 0 auto 1.5rem auto !important;
+        width: 50% !important;    /* Smaller for Mobile */
+        max-width: 160px !important;
     }
 }

@@ -1660,19 +1660,19 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* --- PRESERVE BOXES, TARGET HEADER LINES ONLY --- */
+/* --- FINALIZED: KILL LINES & CIRCLES --- */
 
-/* 1. Reset ONLY the header's specific decorative pseudo-elements */
-#header:before, #header:after {
-    display: none !important;
+/* 1. Remove borders, lines, and force square corners */
+#header, #header:before, #header:after, 
+.logo, .logo:before, .logo:after {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background-image: none !important;
+    border-radius: 0 !important; /* Forces the circle to square */
 }
 
-/* 2. Remove the vertical line specifically attached to the logo area */
-#header .logo:after, #header .logo:before {
-    display: none !important;
-}
-
-/* 3. Logo Scaling (Locked in at your perfect size) */
+/* 2. Fix the logo container */
 #header .logo {
     display: flex !important;
     justify-content: center !important;
@@ -1680,8 +1680,10 @@ input, select, textarea {
     width: 100% !important;
     margin: 0 auto 1.5rem auto !important;
     padding: 0 !important;
+    border: none !important;
 }
 
+/* 3. Locked-in Logo Size */
 #header .logo img {
     width: 20vw !important;
     max-width: 300px !important;

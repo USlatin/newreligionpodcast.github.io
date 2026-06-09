@@ -1660,26 +1660,30 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* Custom Logo Override DELETE THIS IF IT BREAKS */
+/* Clean the header lines DELETE IF IT BREAKS*/
+#header {
+    border: none !important;
+}
+
+#header:before, #header:after, 
+.logo:before, .logo:after {
+    border: none !important;
+    display: none !important;
+}
+
+/* Fix Logo Container and Image DELETE IF IT BREAKS*/
 .logo {
-    font-size: 0 !important; /* Hides the default icon text/pseudo-elements */
-    height: auto !important;
-    width: 100% !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    margin-bottom: 2em !important;
+    height: auto !important;
+    margin: 0 auto 1.5rem auto !important;
 }
 
 .logo img {
-    max-width: 70% !important;
+    max-width: 80% !important;
     max-height: 15vh !important;
     width: auto !important;
     height: auto !important;
-}
-
-/* Remove header decorative borders DELETE THIS IF IT BREAKS*/
-#header:before, 
-#header:after {
-    display: none !important;
+    display: block !important;
 }

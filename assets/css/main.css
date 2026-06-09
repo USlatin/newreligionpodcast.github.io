@@ -1660,30 +1660,27 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* --- FINALIZED SURGICAL CLEANUP --- */
+/* --- SURGICAL REMOVAL OF VERTICAL HEADER LINES --- */
 
-/* Force all header borders to disappear */
-#header, #header * {
-    border-top: none !important;
-    border-bottom: none !important;
-    border-left: none !important;
-    border-right: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-    background-image: none !important;
+/* 1. Kill only the vertical lines (separators) on the header */
+#header:after, 
+#header:before {
+    display: none !important;
 }
 
-/* Flex container for perfect centering */
+/* 2. Target the specific vertical line container */
+#header .inner:after, 
+#header .inner:before {
+    display: none !important;
+}
+
+/* 3. Ensure the Logo container remains free of borders */
 #header .logo {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    margin: 0 auto 1.5rem auto !important;
-    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
-/* Locked-in Logo Size */
+/* 4. Locked-in Logo Size (Confirmed "Perfect" Scaling) */
 #header .logo img {
     width: 20vw !important;
     max-width: 300px !important;

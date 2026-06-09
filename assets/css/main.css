@@ -1660,19 +1660,26 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* --- FINALIZED: KILL LINES & CIRCLES --- */
+/* --- SURGICAL LINE REMOVAL --- */
 
-/* 1. Remove borders, lines, and force square corners */
+/* Force all header/logo elements to have no background, shadow, or border */
 #header, #header:before, #header:after, 
-.logo, .logo:before, .logo:after {
+.logo, .logo:before, .logo:after,
+#header .logo, #header .logo:after, #header .logo:before {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
-    background-image: none !important;
-    border-radius: 0 !important; /* Forces the circle to square */
+    background: none !important;
+    border-radius: 0 !important;
 }
 
-/* 2. Fix the logo container */
+/* Ensure the header container itself is clean */
+#header {
+    box-shadow: none !important;
+    background-image: none !important;
+}
+
+/* 2. Flex container for perfect centering */
 #header .logo {
     display: flex !important;
     justify-content: center !important;
@@ -1680,10 +1687,9 @@ input, select, textarea {
     width: 100% !important;
     margin: 0 auto 1.5rem auto !important;
     padding: 0 !important;
-    border: none !important;
 }
 
-/* 3. Locked-in Logo Size */
+/* 3. Logo Scaling (Locked in) */
 #header .logo img {
     width: 20vw !important;
     max-width: 300px !important;
@@ -1693,6 +1699,7 @@ input, select, textarea {
     margin: 0 auto !important;
 }
 
+/* 4. Mobile horizontal override */
 @media screen and (max-width: 736px) {
     #header .logo img {
         width: 45vw !important;

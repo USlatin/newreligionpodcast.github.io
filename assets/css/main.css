@@ -1660,35 +1660,24 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* --- ABSOLUTE OVERRIDE --- */
-
-/* 1. Remove all borders and decorative lines from the header and logo */
-#header, #header:before, #header:after, 
-.logo, .logo:before, .logo:after, 
-#header .logo, #header .logo:before, #header .logo:after {
+/* --- UNIVERSAL LOGO & BORDER CLEANUP --- */
+#header, .logo, .logo:before, .logo:after {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
-    background-image: none !important;
 }
 
-/* 2. Force the logo container to be flexible and centered */
-#header .logo {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    margin: 0 auto 2rem auto !important;
-    padding: 0 !important;
-    height: auto !important;
-}
-
-/* 3. Force the image size across all devices */
 #header .logo img {
-    width: 85% !important;        
-    max-width: 450px !important;  
-    min-width: 250px !important;  /* This forces size on mobile horizontal */
+    width: 50% !important;        /* Balanced for PC */
+    max-width: 300px !important;  
     height: auto !important;
-    display: block !important;
-    margin: 0 auto !important;
+    margin: 0 auto 2rem auto !important;
+}
+
+/* --- MOBILE SPECIFIC OVERRIDE --- */
+@media screen and (max-width: 736px) {
+    #header .logo img {
+        width: 80% !important;    /* Larger on mobile to compensate for small screen */
+        min-width: 250px !important;
+    }
 }

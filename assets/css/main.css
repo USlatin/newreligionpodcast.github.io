@@ -1660,7 +1660,7 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* Custom Logo Override DELETE BELOW THIS LINE IF IT BREAKS */
+/* Custom Logo Override DELETE THIS IF IT BREAKS */
 .logo {
     font-size: 0 !important; /* Hides the default icon text/pseudo-elements */
     height: auto !important;
@@ -1676,4 +1676,10 @@ input, select, textarea {
     max-height: 15vh !important;
     width: auto !important;
     height: auto !important;
+}
+
+/* Remove header decorative borders DELETE THIS IF IT BREAKS*/
+#header:before, 
+#header:after {
+    display: none !important;
 }

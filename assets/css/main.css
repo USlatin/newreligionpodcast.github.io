@@ -1660,9 +1660,19 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* --- STABLE LOGO & PLACEMENT --- */
+/* --- TOTAL OVERRIDE: KILL CIRCLE & LINES --- */
 
-/* 1. Flex container for perfect centering */
+/* 1. Force everything to be square and borderless */
+#header .logo, #header .logo *, 
+#header .logo:before, #header .logo:after {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: none !important;
+    border-radius: 0 !important; /* This kills the circle */
+}
+
+/* 2. Re-stabilize the Logo Container */
 #header .logo {
     display: flex !important;
     justify-content: center !important;
@@ -1672,7 +1682,7 @@ input, select, textarea {
     padding: 0 !important;
 }
 
-/* 2. Locked-in Logo Size */
+/* 3. Locked-in Logo Size (Confirmed Perfect) */
 #header .logo img {
     width: 20vw !important;
     max-width: 300px !important;
@@ -1680,8 +1690,10 @@ input, select, textarea {
     height: auto !important;
     display: block !important;
     margin: 0 auto !important;
+    border-radius: 0 !important; /* Ensure image isn't clipped into a circle */
 }
 
+/* 4. Mobile horizontal override */
 @media screen and (max-width: 736px) {
     #header .logo img {
         width: 45vw !important;

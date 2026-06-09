@@ -1660,24 +1660,23 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* --- UNIVERSAL LOGO & BORDER CLEANUP --- */
-#header, .logo, .logo:before, .logo:after {
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-}
+/* --- UPDATED LOGO SIZE --- */
 
+/* Balanced for PC: reduced to 35% */
 #header .logo img {
-    width: 50% !important;        /* Balanced for PC */
-    max-width: 300px !important;  
+    width: 35% !important;        
+    max-width: 250px !important;  
     height: auto !important;
+    display: block !important;
     margin: 0 auto 2rem auto !important;
 }
 
-/* --- MOBILE SPECIFIC OVERRIDE --- */
+/* Balanced for Mobile: reduced to 60% */
 @media screen and (max-width: 736px) {
     #header .logo img {
-        width: 80% !important;    /* Larger on mobile to compensate for small screen */
-        min-width: 250px !important;
+        width: 60% !important;    
+        max-width: 200px !important;
+        height: auto !important;
+        margin: 0 auto 1.5rem auto !important;
     }
 }

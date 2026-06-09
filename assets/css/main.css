@@ -1660,30 +1660,32 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* Clean the header lines DELETE IF IT BREAKS*/
-#header {
+/* --- FINAL CLEANUP: LOGO & HEADER --- */
+
+/* 1. Remove the white border/lines from the header */
+#header, #header:before, #header:after, 
+.logo, .logo:before, .logo:after {
     border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
-#header:before, #header:after, 
-.logo:before, .logo:after {
-    border: none !important;
-    display: none !important;
-}
-
-/* Fix Logo Container and Image DELETE IF IT BREAKS*/
+/* 2. Force the logo container to be flexible and centered */
 .logo {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     height: auto !important;
-    margin: 0 auto 1.5rem auto !important;
+    width: 100% !important;
+    margin: 0 auto 2rem auto !important;
 }
 
+/* 3. Force the image to scale correctly */
 .logo img {
-    max-width: 80% !important;
-    max-height: 15vh !important;
+    max-width: 60% !important; 
+    max-height: 12vh !important;
     width: auto !important;
     height: auto !important;
     display: block !important;
+    margin: 0 auto !important;
 }

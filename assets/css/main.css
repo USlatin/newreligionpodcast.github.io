@@ -1662,17 +1662,15 @@ input, select, textarea {
 
 /* --- FINALIZED SURGICAL CLEANUP --- */
 
-/* Kill every type of border, including specific vertical ones */
-#header, #header:before, #header:after, 
-.logo, .logo:before, .logo:after,
-#header .logo {
-    border: none !important;
-    border-right: none !important;
+/* Force all header borders to disappear */
+#header, #header * {
+    border-top: none !important;
+    border-bottom: none !important;
     border-left: none !important;
+    border-right: none !important;
     outline: none !important;
     box-shadow: none !important;
-    background: none !important;
-    border-radius: 0 !important;
+    background-image: none !important;
 }
 
 /* Flex container for perfect centering */

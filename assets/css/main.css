@@ -1660,27 +1660,30 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* --- ULTIMATE OVERRIDE --- */
+/* --- MASTER LOGO OVERRIDE --- */
 
-/* Remove Borders */
-#header, .logo, .logo:before, .logo:after {
+/* 1. Kill all borders and decorative lines */
+#header, #header:before, #header:after, 
+.logo, .logo:before, .logo:after {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
 }
 
-/* Force Center */
-.logo {
+/* 2. Unlock the container width */
+#header .logo {
     display: flex !important;
     justify-content: center !important;
     width: 100% !important;
-    margin-bottom: 2rem !important;
+    max-width: 100% !important;
+    margin: 0 auto 2rem auto !important;
 }
 
-/* Ultra-Specific Image Override */
+/* 3. Force image size to be relative to the header width */
 #header .logo img {
-    width: 85% !important;        
-    max-width: 400px !important;  
+    width: 75% !important;        /* Increased slightly for PC/Mobile balance */
+    max-width: 450px !important;  /* Prevents it from getting too big on desktop */
+    min-width: 200px !important;  /* Prevents it from getting too tiny on mobile */
     height: auto !important;
     display: block !important;
     margin: 0 auto !important;

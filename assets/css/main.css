@@ -1660,9 +1660,9 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* --- FINAL CLEANUP: LOGO & HEADER --- */
+/* --- CLEANUP & LOGO SIZE --- */
 
-/* 1. Remove the white border/lines from the header */
+/* 1. Remove stubborn header borders and lines */
 #header, #header:before, #header:after, 
 .logo, .logo:before, .logo:after {
     border: none !important;
@@ -1670,21 +1670,18 @@ input, select, textarea {
     box-shadow: none !important;
 }
 
-/* 2. Force the logo container to be flexible and centered */
+/* 2. Flex container for perfect centering */
 .logo {
     display: flex !important;
     justify-content: center !important;
-    align-items: center !important;
-    height: auto !important;
     width: 100% !important;
-    margin: 0 auto 2rem auto !important;
+    margin-bottom: 2rem !important;
 }
 
-/* 3. Force the image to scale correctly */
+/* 3. Logo scaling: Responsive to width, not height */
 .logo img {
-    max-width: 60% !important; 
-    max-height: 12vh !important;
-    width: auto !important;
+    width: 85% !important;        
+    max-width: 400px !important;  
     height: auto !important;
     display: block !important;
     margin: 0 auto !important;

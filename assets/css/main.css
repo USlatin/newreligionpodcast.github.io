@@ -1660,26 +1660,22 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* --- SURGICAL LINE REMOVAL --- */
+/* --- FINALIZED SURGICAL CLEANUP --- */
 
-/* Force all header/logo elements to have no background, shadow, or border */
+/* Kill every type of border, including specific vertical ones */
 #header, #header:before, #header:after, 
 .logo, .logo:before, .logo:after,
-#header .logo, #header .logo:after, #header .logo:before {
+#header .logo {
     border: none !important;
+    border-right: none !important;
+    border-left: none !important;
     outline: none !important;
     box-shadow: none !important;
     background: none !important;
     border-radius: 0 !important;
 }
 
-/* Ensure the header container itself is clean */
-#header {
-    box-shadow: none !important;
-    background-image: none !important;
-}
-
-/* 2. Flex container for perfect centering */
+/* Flex container for perfect centering */
 #header .logo {
     display: flex !important;
     justify-content: center !important;
@@ -1689,7 +1685,7 @@ input, select, textarea {
     padding: 0 !important;
 }
 
-/* 3. Logo Scaling (Locked in) */
+/* Locked-in Logo Size */
 #header .logo img {
     width: 20vw !important;
     max-width: 300px !important;
@@ -1699,7 +1695,6 @@ input, select, textarea {
     margin: 0 auto !important;
 }
 
-/* 4. Mobile horizontal override */
 @media screen and (max-width: 736px) {
     #header .logo img {
         width: 45vw !important;

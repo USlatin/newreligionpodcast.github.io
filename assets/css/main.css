@@ -1660,40 +1660,40 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* --- FINALIZED LOGO & HEADER CLEANUP --- */
+/* --- CLEANUP & BALANCED LOGO --- */
 
-/* 1. Remove stubborn header borders and decorative lines */
-#header, #header:before, #header:after, 
-.logo, .logo:before, .logo:after {
+/* 1. Eliminate ALL potential borders/lines */
+#header, #header *, #header:before, #header:after, 
+.logo, .logo *, .logo:before, .logo:after {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
     background-image: none !important;
 }
 
-/* 2. Flex container for perfect centering */
+/* 2. Container setup */
 #header .logo {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
     margin: 0 auto 1.5rem auto !important;
-    padding: 0 !important;
 }
 
-/* 3. Balanced Logo scaling */
+/* 3. Balanced Responsive Sizing */
 #header .logo img {
-    width: 30% !important;        /* Smaller for PC */
-    max-width: 200px !important;  
+    width: 20vw !important;       /* Scales naturally with PC width */
+    max-width: 300px !important;  /* Prevents it from getting too huge */
+    min-width: 180px !important;  /* Prevents it from getting too tiny */
     height: auto !important;
     display: block !important;
     margin: 0 auto !important;
 }
 
-/* 4. Mobile specific override to keep it visible but not bloated */
+/* 4. Mobile horizontal override */
 @media screen and (max-width: 736px) {
     #header .logo img {
-        width: 50% !important;    /* Smaller for Mobile */
-        max-width: 160px !important;
+        width: 45vw !important;   /* Larger % for mobile to ensure visibility */
+        min-width: 150px !important;
     }
 }

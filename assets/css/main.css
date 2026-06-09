@@ -1660,30 +1660,34 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* --- MASTER LOGO OVERRIDE --- */
+/* --- ABSOLUTE OVERRIDE --- */
 
-/* 1. Kill all borders and decorative lines */
+/* 1. Remove all borders and decorative lines from the header and logo */
 #header, #header:before, #header:after, 
-.logo, .logo:before, .logo:after {
+.logo, .logo:before, .logo:after, 
+#header .logo, #header .logo:before, #header .logo:after {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
+    background-image: none !important;
 }
 
-/* 2. Unlock the container width */
+/* 2. Force the logo container to be flexible and centered */
 #header .logo {
     display: flex !important;
     justify-content: center !important;
+    align-items: center !important;
     width: 100% !important;
-    max-width: 100% !important;
     margin: 0 auto 2rem auto !important;
+    padding: 0 !important;
+    height: auto !important;
 }
 
-/* 3. Force image size to be relative to the header width */
+/* 3. Force the image size across all devices */
 #header .logo img {
-    width: 75% !important;        /* Increased slightly for PC/Mobile balance */
-    max-width: 450px !important;  /* Prevents it from getting too big on desktop */
-    min-width: 200px !important;  /* Prevents it from getting too tiny on mobile */
+    width: 85% !important;        
+    max-width: 450px !important;  
+    min-width: 250px !important;  /* This forces size on mobile horizontal */
     height: auto !important;
     display: block !important;
     margin: 0 auto !important;

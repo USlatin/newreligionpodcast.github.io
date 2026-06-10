@@ -1660,7 +1660,13 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* --- KILL HEADER DECORATIVE FRAME --- */
+/* --- KILL HEADER DECORATIVE FRAME & BOX --- */
+#header {
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+
 #header:before, 
 #header:after,
 #header .inner:before,

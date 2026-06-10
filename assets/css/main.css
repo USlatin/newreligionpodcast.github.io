@@ -1662,27 +1662,30 @@ input, select, textarea {
 
 /* --- KILL HEADER DECORATIVE FRAME & BOX --- */
 
-/* 1. Remove border and shadow from the Header container */
-#header {
-    border: none !important;
-    box-shadow: none !important;
-    background: none !important;
-}
-
-/* 2. Remove the specific border/outline on the inner wrapper */
+/* 1. Target the background gradient that creates the frame */
 #header .inner {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
+    background: none !important;
+    background-image: none !important;
 }
 
-/* 3. Disable the pseudo-element frames */
+/* 2. Target the specific header container */
+#header {
+    background: none !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}
+
+/* 3. Kill the line-drawing elements */
 #header:before, 
 #header:after,
 #header .inner:before,
 #header .inner:after {
     display: none !important;
     content: none !important;
+    background: none !important;
 }
 
 /* --- PERFECTED LOGO SIZE & PLACEMENT --- */

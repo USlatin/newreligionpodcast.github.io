@@ -1660,6 +1660,15 @@ input, select, textarea {
 			opacity: 0;
 		}
 
+/* --- KILL HEADER DECORATIVE FRAME --- */
+#header:before, 
+#header:after,
+#header .inner:before,
+#header .inner:after {
+    display: none !important;
+    content: none !important;
+}
+
 /* --- PERFECTED LOGO SIZE & PLACEMENT --- */
 
 /* 1. Ensure logo container is clean and square */
